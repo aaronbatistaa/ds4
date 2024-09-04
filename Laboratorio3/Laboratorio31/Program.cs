@@ -25,10 +25,13 @@ namespace CalculoInicial
 
     public class CalculosMatematicos
     {
-        public float num1 { get; set; }
-        public float num2 { get; set; }
+        public double num1 { get; set; }
+        public double num2 { get; set; }
         public double radio { get; set; }
-        public float CalculoDif()
+        public double ladoA { get; set; }
+        public double ladoB { get; set; }
+
+        public double CalculoDif()
         {
             return (num1 + num2) * (num1 - num2);
         }
@@ -37,5 +40,11 @@ namespace CalculoInicial
         {
             return Math.Round(Math.PI * Math.Pow(radio, 2),2);
         }
+        
+        public double calculoPerimetro()
+        {
+            return 2 * (ladoA + ladoB);
+        }
+
     }
 }
